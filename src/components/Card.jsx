@@ -17,9 +17,25 @@ const ProductCard = ({ product }) => {
     element.requestFullscreen();
   };
 
+  const handleLastSeenProduct = () => {
+    const items = JSON.parse(localStorage.getItem('lastSeenProducts') || "[]");
+    const existingItemIndex = items.indexOf(id);
+
+    if (existingItemIndex !== -1) {
+      items.splice(existingItemIndex, 1);
+    }
+    items.push(id);
+    if (items.length > 4) {
+      items.shift();
+    }
+    localStorage.setItem('lastSeenProducts', JSON.stringify(items));
+  }
+
   return (
     <div className="w-full h-fit">
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${id}`}
+        onClick={handleLastSeenProduct}
+      >
         <div
           className="w-full h-fit min-h-[25rem] 
             overflow-hidden bg-[rgb(245,245,245)] relative
@@ -82,7 +98,7 @@ const ProductCard = ({ product }) => {
           }
           {product?.sale ?
             <span className="text-black opacity-40 line-through ml-4">
-              {formatPrice(product?.price) }
+              {formatPrice(product?.price)}
             </span> : null
           }
         </p>

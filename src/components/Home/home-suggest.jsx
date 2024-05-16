@@ -1,10 +1,21 @@
 import { useTranslation } from "react-i18next";
 import ProductCard from "../Card";
+import { useEffect, useState } from "react";
+import { getRecentlyViewedProducts } from "../../services/product";
 
-const HomeSuggest = () => {
+const HomeSuggest = ({listProductId}) => {
   const { t } = useTranslation("global");
 
-  const products = new Array(8).fill(undefined);
+  const [products, setProducts] = useState([])
+
+  const handleGetRecommendProducts = async () => {
+    const response = await getRecentlyViewedProducts(listProductId)
+    setProducts(response)
+  }
+
+  useEffect(() => {
+    handleGetRecommendProducts()
+  }, [])
 
   return (
     <section className="w-full flex justify-center mt-10 lg:px-3">
@@ -18,12 +29,12 @@ const HomeSuggest = () => {
           lg:overflow-hidden overflow-x-auto whitespace-nowrap scrollbar
           "
         >
-          {products.map((_, index) => (
+          {Array.isArray(products) && products.map((product, index) => (
             <div
               key={index}
               className="inline-block lg:w-[23%] lg:min-w-[320px] md:min-w-[400px] min-w-[360px] mr-3 md:mr-8 lg:mt-8 lg:mr-2 last:mr-0 "
             >
-              <ProductCard />
+              <ProductCard product={product}/>
             </div>
           ))}
         </div>
