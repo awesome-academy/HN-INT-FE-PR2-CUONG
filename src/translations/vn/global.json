@@ -61,8 +61,8 @@
         "detail": "Cho đơn hàng giá trị trên 5 triệu đồng"
       },
       "payment": {
-        "title": "Thanh toán đa dạng",
-        "detail": "Nhiều tùy chọn thanh toán an toàn"
+        "title": "Bảo mật thông tin",
+        "detail": "Thông tin được bảo mật an toàn"
       },
       "support": {
         "title": "Hỗ trợ 24/7",
@@ -105,7 +105,7 @@
       }
     },
 
-    "suggest": "Sản phẩm đã xem",
+    "suggest": "Sản phẩm gợi ý",
 
     "follow": {
       "title": "Theo dõi chúng tôi",
@@ -206,7 +206,8 @@
       "total": "Tổng cộng",
       "ship": "Lưu ý: Giá trên chưa bao gồm phí ship",
       "proceed": "Thanh toán",
-      "back": "Mua hàng ngay"
+      "back": "Mua hàng ngay",
+      "login": "Đăng nhập để mua hàng"
     }
   },
 
@@ -360,7 +361,10 @@
         "delivered": "Đã giao hàng"
       },
       "no-order": "Bạn chưa có đơn hàng nào, mua sắm và tạo đơn hàng ngay",
-      "review": "Thêm đánh giá"
+      "review": "Thêm đánh giá",
+      "received": "Đã nhận hàng",
+      "success": "Cập nhật trạng thái thành công!",
+      "error":"Có lỗi xảy ra, vui lòng thử lại sau"
     },
     "address-title": "Thêm địa chỉ giao hàng",
     "address-btn": "Thêm địa chỉ",
@@ -425,5 +429,15 @@
       "success": "Thêm sản phẩm thành công",
       "err": "Không thể thêm sản phẩm"
     }
+  },
+  "review": {
+    "title": "Thêm đánh giá",
+    "subtitle": "Email của bạn sẽ không hiển thị, những trường bắt buộc được đánh dấu *",
+    "name": "Đánh giá cho sản phẩm",
+    "rating": "Đánh giá của bạn",
+    "review": "Đánh giá chi tiết",
+    "review-ex": "Viết đánh giá của bạn",
+    "comment-err": "Cần tối thiểu 10 ký tự để đánh giá",
+    "btn": "Tạo đánh giá"
   }
 }

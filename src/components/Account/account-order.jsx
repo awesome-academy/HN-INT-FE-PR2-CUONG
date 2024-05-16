@@ -1,14 +1,23 @@
 import { useTranslation } from "react-i18next"
 import { formatDate, formatPrice } from "../../utils/format"
 import { useEffect, useState } from "react"
-import { getUserOrder } from "../../services/order"
+import { getUserOrder, updateOrder } from "../../services/order"
 import Loading from "../Loading"
 import orderImg from '../../assets/order.png'
 import { Link } from "react-router-dom"
+import { toast } from "react-toastify"
+import { toastOption } from "../../utils/toastify"
+import Modal from "../Modal"
+import CreateReview from "./create-review"
 
-const OrderDetail = ({ order }) => {
+const OrderDetail = ({ order, markAsDelivered }) => {
     const { t } = useTranslation("global")
     const status = order?.order_status == "pending" ? t("account.order.status.progress") : t("account.order.status.delivered")
+
+    const handleReceived = () => {
+        markAsDelivered(order?.id)
+    }
+    const [openReview, setOpenReview] = useState(false)
 
     return (
         <div className="w-full">
@@ -41,21 +50,23 @@ const OrderDetail = ({ order }) => {
                                 max-h-[6rem] shadow-lg md:rounded-none rounded-lg" src={item?.product_image} alt="product-img"
                         />
                         <div className="w-full flex flex-col justify-around">
-                            <p className="md:text-xl font-bold">{item?.product_name}</p>
+                            <div className="flex flex-row justify-between items-start">
+                                <p className="md:text-xl text-sm font-bold">{item?.product_name}</p>
+                                <p className="md:text-lg text-sm font-bold">{formatPrice(item?.price * item?.quantity)}</p>
+                            </div>
                             <div className="font-semibold opacity-70 
                                     md:text-lg text-sm flex flex-col
-                                     w-fit
+                                    w-fit
                             ">
-                                <span>{t("cart.color")} {item?.color}</span>
+                                <span className="capitalize">{t("cart.color")} {item?.color}</span>
                                 <span> {t("cart.size")} {item?.size}</span>
                                 <span> {t("cart.quantity")}: {item?.quantity}  </span>
                             </div>
                         </div>
-                        <p className="text-lg font-bold">{formatPrice(item?.price * item?.quantity)}</p>
                     </div>
                 ))}
 
-                <div className="w-full space-x-4 py-4">
+                <div className="w-full md:space-x-4 md:space-y-0 space-y-4 py-4 flex md:flex-row flex-col md:justify-between">
                     <div className="flex flex-row items-center">
                         <p className="md:text-xl font-medium capitalize border-[3px] p-2 w-fit text-nowrap"
                             style={{
@@ -70,16 +81,27 @@ const OrderDetail = ({ order }) => {
                             {order?.order_status == "pending" ? t('account.order.status.title') : t('account.order.status.title2')}
                         </p>
                     </div>
+                    {order?.order_status == "delivered"
+                        ?
+                        <button className="bg-[rgb(62,24,0)] text-white font-bold 
+                         md:h-[4rem] h-[3rem] w-[10rem]"
+                            onClick={() => setOpenReview(true)}
+                        >
+                            Thêm đánh giá
+                        </button>
+                        : <button className="bg-[rgb(62,24,0)] text-white font-bold 
+                            md:h-[4rem] h-[3rem] w-[10rem]"
+                            onClick={handleReceived}
+                        >
+                            Đã nhận hàng
+                        </button>
+                    }
                 </div>
-
-                {order?.order_status == "delivered" &&
-                    <button className="bg-[rgb(62,24,0)] text-white font-bold md:h-[4rem] h-[3rem] md:w-[10rem] w-full">
-                        {t('account.order.review')}
-                    </button>
-                }
-
             </div>
-
+             
+            <Modal open={openReview} onClose={() => setOpenReview(false)}>
+                <CreateReview items={order?.order_items} user_id={order?.user_id}/>
+            </Modal>       
         </div>
     )
 }
@@ -102,6 +124,12 @@ const AccountOrder = ({ user_id }) => {
     useEffect(() => {
         fetchOrder()
     }, [])
+
+    const markAsDelivered = async (order_id) => {
+        await updateOrder(order_id)
+        toast.success(t('account.order.success'), toastOption)
+        fetchOrder()
+    }
 
     return (
         <div className="w-full space-y-6">
@@ -129,8 +157,11 @@ const AccountOrder = ({ user_id }) => {
                     </p>
 
                     {Array.isArray(orders) && orders?.map((order, index) => (
-                        <OrderDetail key={index} order={order} />
-
+                        <OrderDetail
+                            key={index}
+                            order={order}
+                            markAsDelivered={(id) => markAsDelivered(id)}
+                        />
                     ))}
                 </>
             }

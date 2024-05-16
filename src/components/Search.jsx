@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next"
 import { useSidebarStore } from "../states/sidebar"
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useState } from "react"
 import { debounce } from "lodash"
 import { getSearchProducts } from "../services/product"
 import { formatPrice } from "../utils/format"
 import { AiFillStar } from "react-icons/ai"
 import { useNavigate } from "react-router-dom"
+import { useClickOutSideToClose } from "../hooks/use-close-click-outside"
 
 const Product = ({ product, close }) => {
     const navigate = useNavigate()
@@ -36,21 +37,9 @@ const Product = ({ product, close }) => {
 const SearchView = () => {
     const { searchOpen, closeSearch } = useSidebarStore()
     const { t } = useTranslation("global")
-    const searchRef = useRef();
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (searchRef.current && !searchRef.current?.contains(event.target)) {
-                closeSearch()
-                setKeyWord("")
-                setProducts([])
-            }
-        }
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    });
-
+    const searchRef = useClickOutSideToClose(() => {
+        closeSearch()
+    })
     const [products, setProducts] = useState([])
     const [keyword, setKeyWord] = useState("")
 

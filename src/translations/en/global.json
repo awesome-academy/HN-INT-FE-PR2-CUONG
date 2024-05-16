@@ -61,8 +61,8 @@
         "detail": "Free shipping for order above 250$"
       },
       "payment": {
-        "title": "Flexible Payment",
-        "detail": "Multiple secure payment options"
+        "title": "Information Security",
+        "detail": "Information is kept safe and secure"
       },
       "support": {
         "title": "24/7 Support",
@@ -105,7 +105,7 @@
       }
     },
 
-    "suggest": "Recently Viewed Products",
+    "suggest": "Suggestion For You",
 
     "follow": {
       "title": "Follow Us",
@@ -207,7 +207,8 @@
       "total": "Grand Total",
       "ship": "Noice: The price doesn't include shipping fees",
       "proceed": "Proceed to Checkout",
-      "back": "Go to Shop"
+      "back": "Go to Shop",
+      "login": "You have to login first"
     }
   },
 
@@ -361,7 +362,10 @@
         "delivered": "Delivered"
       },
       "no-order": "You currently do not have any orders, let's go shopping now",
-      "review": "Add Review"
+      "review": "Add Review",
+      "received": "Mark as Received",
+      "success": "Order Status Updated Successfully",
+      "error":"An Error Occurred, Please Try Again Later"
     },
     "address-title": "Add New Address",
     "address-btn": "Add Address",
@@ -428,5 +432,16 @@
       "success": "Added Product Success",
       "err": "Unable Adding Product"
     }
+  },
+
+  "review": {
+    "title": "Add Your Review",
+    "subtitle": "Your email address will not be published, Required fields are marked *",
+    "name": "Review for Product",
+    "rating": "Your rating",
+    "review": "Add Detailed Review",
+    "review-ex": "Write here",
+    "comment-err": "Your review need at least 10 characters",
+    "btn": "Create Review"
   }
 }

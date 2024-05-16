@@ -54,4 +54,18 @@ export const getUserOrder = async (user_id) => {
         console.error('Lỗi:', error);
         return error?.response || { status: 'error', message: 'Lỗi không xác định' };
     }
-};
+}
+
+export const updateOrder = async(order_id) => {
+    try{
+        const response = await orderAPI.get('/orders')
+        const orders = response?.data
+        const order = orders.find(o => o.id === order_id)
+        const payload = {...order, order_status: 'delivered'}
+        const updateResponse = await orderAPI.put(`/orders/${order_id}`, payload)
+    
+        return response?.data
+    }catch(error){
+        return error?.response
+    }
+}
