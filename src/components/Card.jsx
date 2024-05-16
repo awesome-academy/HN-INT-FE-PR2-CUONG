@@ -9,7 +9,7 @@ import { formatPrice, originalPrice } from "../utils/format";
 
 const ProductCard = ({ product }) => {
 
-  const id = product?._id
+  const id = product?.id
 
   const handleFullScreen = (event) => {
     event.preventDefault();
