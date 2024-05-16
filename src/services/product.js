@@ -236,3 +236,77 @@ export const getRecentlyViewedProducts = async(list_id) => {
     return error?.response;
   }
 }
+
+//admin
+
+export const getAdminProducts = async() => {
+  try{
+    const response = await productAPI.get(`/products`);
+    const products = response?.data
+    const category = await productAPI.get('/categories')
+    const categories = category?.data
+    const item = await productAPI.get('/products-items')
+    const items = item?.data
+
+    const productsData = products.map(product => {
+      const categoryProduct = product.category_id.map(id =>{
+        const category = categories.find(item => item.id == id)
+        return{
+          [category?.category_type]: category?.category_name
+        }
+      })
+      const mergedCategoryProduct = categoryProduct.reduce((acc, curr) => {
+        return { ...acc, ...curr };
+      }, {});
+      const product_items = items.filter(item => item.product_id == product.id)
+      return{
+        ...product, ...mergedCategoryProduct , product_items
+      }
+    })
+    return productsData
+  }catch (error) {
+    return error?.response;
+  }
+}
+
+export const deleteProduct = async (product_id) => {
+  try{
+      await productAPI.delete("/products/"+product_id)
+      const response = await productAPI.get("/products-items")
+      const items = response?.data
+      const productItems = items.filter(item => item.product_id == product_id)
+      for(let item of productItems){
+        await productAPI.delete("/product-items/"+item?.id)
+      }
+      return {
+        success: true
+      }
+  }catch(error){
+      return error?.response
+  }
+}
+
+export const createProduct = async (payload) => {
+  try {
+    const { productItems, gender, category, brand, ...product } = payload
+    const categoryItems = await productAPI.get("/categories")
+    const categories = categoryItems?.data
+    let category_id = []
+    const gender_id = categories.find(item => item.category_name == gender)
+    const brand_id = categories.find(item => item.category_name == brand)
+    const type_id = categories.find(item => item.category_name == category)
+    category_id.push(gender_id, brand_id, type_id)
+    const response = await productAPI.post('/products', { ...product, product_image: "../.."+product?.product_image, rating: 5, category_id ,createdAt: Date.now(), updatedAt: Date.now() });
+    const product_id = response?.data?.id;
+    for (const item of productItems) {
+      for (const size of item.size.split(",")) {
+        await productAPI.post("/products-items", { ...item,product_image: "../.."+item?.product_image ,size: size, product_id });
+      }
+    }
+    return {
+      success: true
+    }
+  } catch (error) {
+    return error?.response;
+  }
+}
