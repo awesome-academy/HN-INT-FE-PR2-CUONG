@@ -8,6 +8,7 @@ import { useCartStore } from "../../states/cart"
 import { useEffect, useState } from "react"
 import Loading from "../Loading"
 import emptyCart from "../../assets/emptycart.svg"
+import { useUserStorage } from "../../states/user"
 
 const Product = ({ product }) => {
     const { t } = useTranslation("global")
@@ -101,6 +102,7 @@ const MainCart = () => {
 
     const { t } = useTranslation("global")
     const { cart, getCartItems, loading } = useCartStore()
+    const {user} = useUserStorage()
     useEffect(() => {
         getCartItems()
     }, [])
@@ -108,8 +110,12 @@ const MainCart = () => {
     const navigate = useNavigate()
 
     const handleCheckout = () => {
-        sessionStorage.setItem("totalPrice", subTotal(cart) * 1.1)
-        navigate("/checkout")
+        if(!user){
+            toast.warning("Đăng nhập để đặt đơn!", toastOption)
+        }else{
+            sessionStorage.setItem("totalPrice", subTotal(cart) * 1.1)
+            navigate("/checkout")
+        }
     }
 
     return (
