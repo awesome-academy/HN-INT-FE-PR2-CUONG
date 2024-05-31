@@ -1,0 +1,457 @@
+{
+  "account": [
+    {
+      "id": "6639b0ba887cefc6e49cd689",
+      "role": "admin",
+      "email": "1@gmail.com",
+      "password": "123456",
+      "createdAt": "2024-05-07T04:40:26.554Z",
+      "updatedAt": "2024-05-07T04:40:26.555Z"
+    },
+    {
+      "id": "6639f73b9c4ffccd0b21b1a3",
+      "role": "user",
+      "email": "2@gmail.com",
+      "password": "$2b$13$dVAhRqYaz1We4IEl6JJ95Oqrow1b6sIcntKlcmJ6DfFh5cha1eng2",
+      "createdAt": "2024-05-07T09:41:15.323Z",
+      "updatedAt": "2024-05-07T09:41:15.323Z"
+    },
+    {
+      "id": "663a00c7c37458960c586129",
+      "role": "user",
+      "email": "3@gmail.com",
+      "password": "$2b$13$IY6nzc/6.9hOtf3gxXLbHu3t9Q00AuKQwgKiZVdc5U/AJ.BXQALOu",
+      "createdAt": "2024-05-07T10:21:59.343Z",
+      "updatedAt": "2024-05-07T10:21:59.343Z"
+    }
+  ],
+
+  "users": [
+    {
+      "id": "6639b3a09d2252e8670961d2",
+      "account_id": "6639b0ba887cefc6e49cd689",
+      "name": "Pemond1234",
+      "gender": "male",
+      "profileImg": "https://asset.cloudinary.com/dwx2u4ugr/128408ce7609dd54fa86a610c85100cd",
+      "phone": "012345678",
+      "createdAt": "2024-05-07T04:52:48.656Z",
+      "updatedAt": "2024-05-07T04:52:48.657Z"
+    },
+    {
+      "id": "6639f7409c4ffccd0b21b1a5",
+      "account_id": "6639f73b9c4ffccd0b21b1a3",
+      "name": "Hmm man",
+      "gender": "female",
+      "profileImg": "https://asset.cloudinary.com/dwx2u4ugr/128408ce7609dd54fa86a610c85100cd",
+      "phone": "012345678",
+      "createdAt": "2024-05-07T09:41:20.963Z",
+      "updatedAt": "2024-05-15T08:42:04.416Z"
+    },
+    {
+      "id": "663a00d7c37458960c58612b",
+      "account_id": "663a00c7c37458960c586129",
+      "name": "Lê Cương",
+      "gender": "male",
+      "profileImg": "https://asset.cloudinary.com/dwx2u4ugr/128408ce7609dd54fa86a610c85100cd",
+      "phone": "012345678",
+      "createdAt": "2024-05-07T10:22:15.566Z",
+      "updatedAt": "2024-05-15T08:42:57.904Z"
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "663aecabc393b595b2e456f4",
+      "category_name": "male",
+      "category_type": "gender"
+    },
+    {
+      "id": "663aecc5c393b595b2e456f5",
+      "category_name": "female",
+      "category_type": "gender"
+    },
+    {
+      "id": "663aecccc393b595b2e456f6",
+      "category_name": "kid",
+      "category_type": "gender"
+    },
+    {
+      "id": "663aecf9c393b595b2e456f7",
+      "category_name": "shoes",
+      "category_type": "category"
+    },
+    {
+      "id": "663aed00c393b595b2e456f8",
+      "category_name": "clothes",
+      "category_type": "category"
+    },
+    {
+      "id": "663aed1cc393b595b2e456f9",
+      "category_name": "accessories",
+      "category_type": "category"
+    },
+    {
+      "id": "663aed2ac393b595b2e456fa",
+      "category_name": "nike",
+      "category_type": "brand"
+    },
+    {
+      "id": "663aed30c393b595b2e456fb",
+      "category_name": "adidas",
+      "category_type": "brand"
+    }
+  ],
+
+  "products": [
+    {
+      "id": "663af3d4c393b595b2e456ff",
+      "product_name": "Bespoke Plastic Tuna",
+      "price": 1147,
+      "product_image": "https://loremflickr.com/640/480/shoes?lock=3347362755903488",
+      "description": "Abbas consectetur ademptio tum eligendi. Summa tenetur undique aperte accusantium contego. Depulso compello voluptates ait ademptio territo harum. Vestrum deporto esse. Absorbeo animi exercitationem pecus vitiosus depopulo. Eos ter adduco aurum victoria abbas nostrum paulatim at doloribus.",
+      "rating": 1.9,
+      "sale": 40,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed2ac393b595b2e456fa",
+        "663aed00c393b595b2e456f8"
+      ]
+    },
+    {
+      "id": "663af403c393b595b2e45700",
+      "product_name": "Rustic Wooden Bike",
+      "price": 9861,
+      "product_image": "https://loremflickr.com/640/480/fashion?lock=6324602246529024",
+      "description": "Abutor ambulo contego virga vallum tempora harum tondeo deputo. Vomito sub ipsa custodia demonstro vae conculco creta volo stips. Amoveo universe thymbra cibo tenuis eum.",
+      "rating": 4.3,
+      "sale": 0,
+      "category_id": [
+        "663aecc5c393b595b2e456f5",
+        "663aed2ac393b595b2e456fa",
+        "663aecf9c393b595b2e456f7"
+      ]
+    },
+    {
+      "id": "663af44ac393b595b2e45701",
+      "product_name": "Ergonomic Concrete Towels",
+      "price": 9779,
+      "product_image": "https://loremflickr.com/640/480/fashion?lock=5477811716358144",
+      "description": "Trucido clamo sollicito contra sub suscipio calamitas. Quam turbo cena sustineo arma speculum demulceo libero unus. Clibanus quaerat tener tabgo. Delego denuo arbustum infit. Vulnero causa calculus admoneo vulgo. Paens vitae vesica.",
+      "rating": 4.3,
+      "sale": 0,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed2ac393b595b2e456fa",
+        "663aed00c393b595b2e456f8"
+      ]
+    },
+    {
+      "id": "663af46ec393b595b2e45702",
+      "product_name": "Modern Cotton Shoes",
+      "price": 6886,
+      "product_image": "https://loremflickr.com/640/480/shoes?lock=209983880822784",
+      "description": "Calculus vomito addo suffragium volo. Communis terebro tonsor votum stillicidium defetiscor patior concedo cumque. Suscipit facilis patria vicinus villa toties ago.",
+      "rating": 2.7,
+      "sale": 0,
+      "category_id": [
+        "663aecc5c393b595b2e456f5",
+        "663aed30c393b595b2e456fb",
+        "663aecf9c393b595b2e456f7"
+      ]
+    },
+    {
+      "id": "663af483c393b595b2e45703",
+      "product_name": "Ergonomic Fresh Chair",
+      "price": 3925,
+      "product_image": "https://loremflickr.com/640/480/shoes?lock=8222328011882496",
+      "description": "Thorax ultra quisquam commodi temeritas teres ventosus cohors. Virga corrupti congregatio illo somniculosus cerno bestia non desidero. Stabilis cognatus summisse spoliatio. Carcer bellicus aetas tumultus sordeo degenero id tametsi acervus verus. Quo contego creator quidem recusandae.",
+      "rating": 2.5,
+      "sale": 0,
+      "category_id": [
+        "663aecc5c393b595b2e456f5",
+        "663aed2ac393b595b2e456fa",
+        "663aecf9c393b595b2e456f7"
+      ]
+    },
+    {
+      "id": "663af49fc393b595b2e45704",
+      "product_name": "Licensed Fresh Tuna",
+      "price": 3819,
+      "product_image": "https://loremflickr.com/640/480/shoes?lock=3468490872717312",
+      "description": "Thesaurus terebro reprehenderit aestus ver volaticus credo colo. Tristis accedo conscendo crepusculum degero audio admoveo nobis. Aegre cultellus cito alii utor agnosco defessus tabesco soluta.",
+      "rating": 3.4,
+      "sale": 0,
+      "category_id": [
+        "663aecccc393b595b2e456f6",
+        "663aed2ac393b595b2e456fa",
+        "663aed1cc393b595b2e456f9"
+      ]
+    },
+    {
+      "id": "663af515c393b595b2e4570c",
+      "product_name": "Unbranded Steel Pants",
+      "price": 7899,
+      "product_image": "https://loremflickr.com/640/480/fashion?lock=5998964918714368",
+      "description": "Cerno adulescens at caecus tibi centum dolorum ante. Benevolentia amplexus vulgo utique vaco bene suggero. Thorax corrumpo causa angulus tollo. Delicate caput demo tepidus animadverto carpo. Acceptus claudeo thermae sopor aperte aperiam accendo.",
+      "rating": 2.9,
+      "sale": 0,
+      "category_id": [
+        "663aeccabc393b595b2e456f4",
+        "663aed30c393b595b2e456fb",
+        "663aed00c393b595b2e456f8"
+      ]
+    },
+    {
+      "id": "663af527c393b595b2e4570d",
+      "product_name": "Rustic Soft Cheese",
+      "price": 3798,
+      "product_image": "https://loremflickr.com/640/480/fashion?lock=5177123694182400",
+      "description": "Cometes quod molestiae accendo. Ultra allatus conqueror alias campana canonicus comptus via voveo vigilo. Quas utor canonicus eaque virga vesco vilis.",
+      "rating": 4.6,
+      "sale": 0,
+      "category_id": [
+        "663aecc5c393b595b2e456f5",
+        "663aed2ac393b595b2e456fa",
+        "663aed1cc393b595b2e456f9"
+      ]
+    },
+    {
+      "id": "663af53bc393b595b2e4570e",
+      "product_name": "Handmade Metal Chicken",
+      "price": 1639,
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=4690426369933312",
+      "description": "Vis adnuo depono absens cinis mollitia adipisci adipisci vallum tabesco. Vix eos spero alias aperio soleo valeo tutamen campana. Cubo cohibeo atqui temeritas validus depulso dedico auctus necessitatibus tutis.",
+      "rating": 2.5,
+      "sale": 0,
+      "category_id": [
+        "663aecc5c393b595b2e456f5",
+        "663aed2ac393b595b2e456fa",
+        "663aecf9c393b595b2e456f7"
+      ]
+    },
+    {
+      "id": "663af554c393b595b2e4570f",
+      "product_name": "Awesome Concrete Soap",
+      "price": 2430,
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=4690426369933312",
+      "description": "Aegre antiquus voluptatem. Ciminatio combibo saepe demens laboriosam aegrus accommodo taedium pax pax. Velit amitto coadunatio addo tollo. Conturbo denuncio victus assumenda.",
+      "rating": 4.7,
+      "sale": 0,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed30c393b595b2e456fb",
+        "663aed1cc393b595b2e456f9"
+      ]
+    },
+    {
+      "id": "663af5afc393b595b2e45711",
+      "product_name": "Handcrafted Rubber Shirt",
+      "price": 8591,
+      "product_image": "https://loremflickr.com/640/480/fashion?lock=7580977056448512",
+      "description": "Aggredior vespillo delego depulso adulescens casus voro condico decimus nobis. Sophismata tremo ago deprecator decipio thesaurus versus trucido quos. Temperantia accusantium theca amissio venio facilis quas. Impedit vito colligo avarus alias teneo tenus solitudo.",
+      "rating": 4.7,
+      "sale": 0,
+      "category_id": [
+        "663aecc5c393b595b2e456f5",
+        "663aed30c393b595b2e456fb",
+        "663aed00c393b595b2e456f8"
+      ]
+    },
+    {
+      "id": "663b30b4a7de1c14cb12b4d0",
+      "product_name": "Ergonomic Concrete Towels",
+      "price": 9779,
+      "product_image": "https://loremflickr.com/640/480/fashion?lock=5477811716358144",
+      "description": "Trucido clamo sollicito contra sub suscipio calamitas. Quam turbo cena sustineo arma speculum demulceo libero unus. Clibanus quaerat tener tabgo. Delego denuo arbustum infit. Vulnero causa calculus admoneo vulgo. Paens vitae vesica.",
+      "rating": 4.3,
+      "sale": 0,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed2ac393b595b2e456fa",
+        "663aed00c393b595b2e456f8"
+      ]
+    },
+    {
+      "id": "663b30c3a7de1c14cb12b4d2",
+      "product_name": "Awesome Concrete Soap",
+      "price": 2430,
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=4690426369933312",
+      "description": "Aegre antiquus voluptatem. Ciminatio combibo saepe demens laboriosam aegrus accommodo taedium pax pax. Velit amitto coadunatio addo tollo. Conturbo denuncio victus assumenda.",
+      "rating": 4.7,
+      "sale": 0,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed30c393b595b2e456fb",
+        "663aed1cc393b595b2e456f9"
+      ]
+    },
+    {
+      "id": "663b30c7a7de1c14cb12b4d3",
+      "product_name": "Handcrafted Rubber Shirt",
+      "price": 8591,
+      "product_image": "https://loremflickr.com/640/480/fashion?lock=7580977056448512",
+      "description": "Aggredior vespillo delego depulso adulescens casus voro condico decimus nobis. Sophismata tremo ago deprecator decipio thesaurus versus trucido quos. Temperantia accusantium theca amissio venio facilis quas. Impedit vito colligo avarus alias teneo tenus solitudo.",
+      "rating": 3.4,
+      "sale": 0,
+      "category_id": [
+        "663aecc5c393b595b2e456f5",
+        "663aed30c393b595b2e456fb",
+        "663aed00c393b595b2e456f8"
+      ]
+    },
+    {
+      "id": "663b30cba7de1c14cb12b4d4",
+      "product_name": "Bespoke Plastic Tuna",
+      "price": 1147,
+      "product_image": "https://loremflickr.com/640/480/shoes?lock=3347362755903488",
+      "description": "Abbas consectetur ademptio tum eligendi. Summa tenetur undique aperte accusantium contego. Depulso compello voluptates ait ademptio territo harum. Vestrum deporto esse. Absorbeo animi exercitationem pecus vitiosus depopulo. Eos ter adduco aurum victoria abbas nostrum paulatim at doloribus.",
+      "rating": 1.9,
+      "sale": 40,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed2ac393b595b2e456fa",
+        "663aed00c393b595b2e456f8"
+      ]
+    },
+    {
+      "id": "663b30d6a7de1c14cb12b4d5",
+      "product_name": "Awesome Concrete Soap",
+      "price": 2430,
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=4690426369933312",
+      "description": "Aegre antiquus voluptatem. Ciminatio combibo saepe demens laboriosam aegrus accommodo taedium pax pax. Velit amitto coadunatio addo tollo. Conturbo denuncio victus assumenda.",
+      "rating": 4.7,
+      "sale": 0,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed30c393b595b2e456fb",
+        "663aed1cc393b595b2e456f9"
+      ]
+    },
+    {
+      "id": "663b30dca7de1c14cb12b4d6",
+      "product_name": "Bespoke Plastic Tuna",
+      "price": 1147,
+      "product_image": "https://loremflickr.com/640/480/shoes?lock=3347362755903488",
+      "description": "Abbas consectetur ademptio tum eligendi. Summa tenetur undique aperte accusantium contego. Depulso compello voluptates ait ademptio territo harum. Vestrum deporto esse. Absorbeo animi exercitationem pecus vitiosus depopulo. Eos ter adduco aurum victoria abbas nostrum paulatim at doloribus.",
+      "rating": 1.9,
+      "sale": 40,
+      "category_id": [
+        "663aecabc393b595b2e456f4",
+        "663aed2ac393b595b2e456fa",
+        "663aed00c393b595b2e456f8"
+      ]
+    }
+  ],
+
+  "products-items": [
+    {
+      "id": "663c43c0ccf1d4cbb8851dce",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "size": "XXXL",
+      "color": "gray",
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=8491083025612800",
+      "price": 1922,
+      "sale": 0,
+      "quantity": 9
+    },
+    {
+      "id": "663c43f1ccf1d4cbb8851dcf",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "size": "XL",
+      "color": "rgb(97,39,25)",
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=5026277285167104",
+      "price": 4303,
+      "sale": 0,
+      "quantity": 7
+    },
+    {
+      "id": "663c4407ccf1d4cbb8851dd0",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "size": "S",
+      "color": "rgb(158,0,2)",
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=5373249342930944",
+      "price": 3791,
+      "sale": 10,
+      "quantity": 2
+    },
+    {
+      "id": "663c441dccf1d4cbb8851dd1",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "size": "XXL",
+      "color": "rgb(97,39,25)",
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=3218029211025408",
+      "price": 3421,
+      "sale": 0,
+      "quantity": 0
+    },
+    {
+      "id": "663c443accf1d4cbb8851dd2",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "size": "M",
+      "color": "gray",
+      "product_image": "https://loremflickr.com/640/480/clothes?lock=689133573898240",
+      "price": 5325,
+      "sale": 0,
+      "quantity": 6
+    }
+  ],
+
+  "reviews": [
+    {
+      "id": "663c9726778120649fb33abe",
+      "user_id": "6639b3a09d2252e8670961d2",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "rating": 5,
+      "comment": "Đây là sản phẩm tuyệt vời nhất mà t từng trải nghiệm, amazing good job e zai",
+      "review_image": [],
+      "createdAt": "2024-05-09T09:28:06.453Z",
+      "updatedAt": "2024-05-09T09:28:06.454Z"
+    },
+    {
+      "id": "663c9750778120649fb33ac0",
+      "user_id": "6639b3a09d2252e8670961d2",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "rating": 4,
+      "comment": "Sản phẩm khá đẹp, mỗi tội người bán hơi béo",
+      "review_image": [],
+      "createdAt": "2024-05-09T09:28:48.669Z",
+      "updatedAt": "2024-05-09T09:28:48.669Z"
+    },
+    {
+      "id": "663c9781778120649fb33ac2",
+      "user_id": "663a00d7c37458960c58612b",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "rating": 1,
+      "comment": "Thằng bán quá béo lên cho 1 sao",
+      "review_image": [],
+      "createdAt": "2024-05-09T09:29:37.286Z",
+      "updatedAt": "2024-05-09T09:29:37.286Z"
+    },
+    {
+      "id": "663c9b7676db4bf661b29431",
+      "user_id": "663a00d7c37458960c58612b",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "rating": 3,
+      "comment": "Hmm luôn",
+      "review_image": [],
+      "createdAt": "2024-05-09T09:46:30.488Z",
+      "updatedAt": "2024-05-09T09:46:30.488Z"
+    },
+    {
+      "id": "663d8b88552bd474c674704a",
+      "user_id": "6639f7409c4ffccd0b21b1a5",
+      "product_id": "663b30c7a7de1c14cb12b4d3",
+      "rating": 4,
+      "comment": "Trải nghiệm người dùng hơi bị tệ, người bán thì béo lên chỉ cho được 2 sao thâu ",
+      "review_image": [
+        "https://res.cloudinary.com/dwx2u4ugr/image/upload/v1715076914/avatars/1_zriyqx.jpg"
+      ],
+      "createdAt": "2024-05-10T02:50:48.694Z",
+      "updatedAt": "2024-05-10T02:50:48.694Z"
+    }
+  ]
+
+  
+}
+
+
