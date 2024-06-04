@@ -217,3 +217,14 @@ export const getSearchProducts = async (query) => {
     return error?.response;
   }
 };
+
+export const getRecentlyViewedProducts = async(list_id) => {
+  try{
+    const response = await productAPI.get(`/products`);
+    const products = response?.data
+    const product = products.filter(product => list_id.includes(product.id))
+    return product
+  }catch (error) {
+    return error?.response;
+  }
+}
