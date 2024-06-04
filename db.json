@@ -12,7 +12,7 @@
       "id": "6639f73b9c4ffccd0b21b1a3",
       "role": "user",
       "email": "2@gmail.com",
-      "password": "$2b$13$dVAhRqYaz1We4IEl6JJ95Oqrow1b6sIcntKlcmJ6DfFh5cha1eng2",
+      "password": "123456",
       "createdAt": "2024-05-07T09:41:15.323Z",
       "updatedAt": "2024-05-07T09:41:15.323Z"
     },
@@ -20,29 +20,36 @@
       "id": "663a00c7c37458960c586129",
       "role": "user",
       "email": "3@gmail.com",
-      "password": "$2b$13$IY6nzc/6.9hOtf3gxXLbHu3t9Q00AuKQwgKiZVdc5U/AJ.BXQALOu",
+      "password": "123456",
       "createdAt": "2024-05-07T10:21:59.343Z",
       "updatedAt": "2024-05-07T10:21:59.343Z"
+    },
+    {
+      "id": "a2e0",
+      "email": "cuong.lt204637@sis.hust.edu.vn",
+      "password": "123456",
+      "role": "user",
+      "createdAt": 1716778355629,
+      "updatedAt": 1716778355629
     }
   ],
-
   "users": [
     {
+      "name": "Pemond2906",
+      "phone": "0987654321",
+      "gender": "male",
+      "profileImg": "https://res.cloudinary.com/dwx2u4ugr/image/upload/v1715076914/avatars/1_zriyqx.jpg",
       "id": "6639b3a09d2252e8670961d2",
       "account_id": "6639b0ba887cefc6e49cd689",
-      "name": "Pemond1234",
-      "gender": "male",
-      "profileImg": "https://asset.cloudinary.com/dwx2u4ugr/128408ce7609dd54fa86a610c85100cd",
-      "phone": "012345678",
-      "createdAt": "2024-05-07T04:52:48.656Z",
-      "updatedAt": "2024-05-07T04:52:48.657Z"
+      "createdAt": "2024-05-07T09:41:20.963Z",
+      "updatedAt": "2024-05-15T08:42:04.416Z"
     },
     {
       "id": "6639f7409c4ffccd0b21b1a5",
       "account_id": "6639f73b9c4ffccd0b21b1a3",
       "name": "Hmm man",
       "gender": "female",
-      "profileImg": "https://asset.cloudinary.com/dwx2u4ugr/128408ce7609dd54fa86a610c85100cd",
+      "profileImg": "https://res.cloudinary.com/dwx2u4ugr/image/upload/v1715076914/avatars/1_zriyqx.jpg",
       "phone": "012345678",
       "createdAt": "2024-05-07T09:41:20.963Z",
       "updatedAt": "2024-05-15T08:42:04.416Z"
@@ -52,13 +59,22 @@
       "account_id": "663a00c7c37458960c586129",
       "name": "Lê Cương",
       "gender": "male",
-      "profileImg": "https://asset.cloudinary.com/dwx2u4ugr/128408ce7609dd54fa86a610c85100cd",
+      "profileImg": "https://res.cloudinary.com/dwx2u4ugr/image/upload/v1715076914/avatars/1_zriyqx.jpg",
       "phone": "012345678",
       "createdAt": "2024-05-07T10:22:15.566Z",
       "updatedAt": "2024-05-15T08:42:57.904Z"
+    },
+    {
+      "id": "2443",
+      "phone": "0368916468",
+      "gender": "male",
+      "account_id": "a2e0",
+      "name": "Pemond",
+      "profileImg": "https://res.cloudinary.com/dwx2u4ugr/image/upload/v1715076914/avatars/1_zriyqx.jpg",
+      "createdAt": 1716778518052,
+      "updatedAt": 1716778518052
     }
   ],
-
   "categories": [
     {
       "id": "663aecabc393b595b2e456f4",
@@ -101,7 +117,6 @@
       "category_type": "brand"
     }
   ],
-
   "products": [
     {
       "id": "663af3d4c393b595b2e456ff",
@@ -342,7 +357,6 @@
       ]
     }
   ],
-
   "products-items": [
     {
       "id": "663c43c0ccf1d4cbb8851dce",
@@ -395,7 +409,6 @@
       "quantity": 6
     }
   ],
-
   "reviews": [
     {
       "id": "663c9726778120649fb33abe",
@@ -449,9 +462,58 @@
       "createdAt": "2024-05-10T02:50:48.694Z",
       "updatedAt": "2024-05-10T02:50:48.694Z"
     }
+  ],
+  "orders": [
+    {
+      "id": "55ae",
+      "user_id": "6639b3a09d2252e8670961d2",
+      "shipping_address": {
+        "name": "Pemond",
+        "phone": "0368916468",
+        "city": "Thành phố Hà Nội",
+        "district": "Huyện Chương Mỹ",
+        "ward": "Thị trấn Chúc Sơn",
+        "street": "cạnh nhà 17 yên sơn"
+      },
+      "order_total": "11715.0",
+      "order_items": [
+        {
+          "product_item_id": "663c443accf1d4cbb8851dd2",
+          "quantity": 2,
+          "price": 5325
+        }
+      ],
+      "order_status": "pending",
+      "createdAt": 1716775038262,
+      "updatedAt": 1716775038262
+    },
+    {
+      "id": "5526",
+      "user_id": "6639b3a09d2252e8670961d2",
+      "shipping_address": {
+        "name": "HMMM",
+        "phone": "0368916468",
+        "city": "Thành phố Hà Nội",
+        "district": "Quận Nam Từ Liêm",
+        "ward": "Phường Mễ Trì",
+        "street": "Landmark 72"
+      },
+      "order_total": "7971.7",
+      "order_items": [
+        {
+          "product_item_id": "663c443accf1d4cbb8851dd2",
+          "quantity": 1,
+          "price": 5325
+        },
+        {
+          "product_item_id": "663c43c0ccf1d4cbb8851dce",
+          "quantity": 1,
+          "price": 1922
+        }
+      ],
+      "order_status": "pending",
+      "createdAt": 1716775195646,
+      "updatedAt": 1716775195646
+    }
   ]
-
-  
 }
-
-
