@@ -177,6 +177,14 @@ export const getRelatedProduct = async (product_id) => {
   }
 };
 
+export const createReview = async (payload) => {
+  try{
+      const response = await productAPI.post(`/reviews`, payload)
+      return response?.data
+  }catch(error){
+      return error?.response
+  }
+}
 
 // cart
 export const getCartItems = async (listId) => {

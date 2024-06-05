@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react"
+=======
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from "react"
+>>>>>>> 8ebe3fa (feat: Create Comment, update Status Order)
+>>>>>>> c68937d (feat: Create Comment, update Status Order)
 import HomeFollow from "../follow-us"
 import HomeBanner from "../home-banner"
 import HomePolicy from "../home-policy"
