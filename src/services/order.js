@@ -69,3 +69,35 @@ export const updateOrder = async(order_id) => {
         return error?.response
     }
 }
+
+export const getAllOrders = async() => {
+    try{
+        const response = await orderAPI.get('/orders')
+        const orders = response?.data
+        const productItems = await orderAPI.get('/products-items')
+        const items = productItems?.data
+        const productData = await orderAPI.get('/products')
+        const products = productData?.data
+
+        const data = orders.map(order => {
+            const orderItems = order.order_items.map(item =>{
+                const productItem = items.find(i => i.id === item.product_item_id)
+                const product = products.find(p => p.id === productItem.product_id)
+                return {
+                    ...item,
+                    product_name: product?.product_name,
+                    product_image: product?.product_image,
+                    size: productItem?.size,
+                    color: productItem?.color
+                }
+            })
+            return{
+                ...order,
+                order_items: orderItems
+            }
+        })
+        return data
+    }catch(error){
+        return error?.response
+    }
+}
